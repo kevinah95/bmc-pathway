@@ -4,6 +4,7 @@ import string
 import pprint
 from collections import OrderedDict
 from graph import *
+import csv
 
 # load filenames from metabolic-pathways folder
 pathways = []
@@ -125,3 +126,7 @@ if __name__ == '__main__':
     print  
     
     show_dictionary()
+    out = csv.writer(open("alpha.csv","w"), delimiter=',',quoting=csv.QUOTE_NONE)
+    out.writerow(renamed_path(bfs0))
+    out = csv.writer(open("beta.csv","w"), delimiter=',',quoting=csv.QUOTE_NONE)
+    out.writerow(renamed_path(bfs1))

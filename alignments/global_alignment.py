@@ -152,6 +152,10 @@ def needleman_wunsch(sequence1, sequence2):
 	return alignments
 
 # UPDATE: Test case for Metabolic-Pathways, by @kecastro.
-ROUTE0 = ['A0', 'B0']
-ROUTE1 = ['C0', 'D0', 'E0', 'F0', 'G0', 'H0', 'I0', 'J0', 'K0', 'L0', 'M0', 'N0', 'O0']
+text_file = open("alpha.csv", "r")
+text_file = open("beta.csv", "r")
+alpha = text_file.readline().rstrip().split(',')
+beta = text_file.readline().rstrip().split(',')
+ROUTE0 = alpha
+ROUTE1 = beta
 print(needleman_wunsch(ROUTE0, ROUTE1))

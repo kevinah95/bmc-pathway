@@ -62,6 +62,10 @@ def local_alignment(sequence1, sequence2):
 	return alignments
 
 # UPDATE: Test case for Metabolic-Pathways, by @kecastro.
-#ROUTE0 = 'ABCDEFGHIJ'
-#ROUTE1 = 'KLMNOPQRST'
-#print(local_alignment(ROUTE0, ROUTE1))
+text_file = open("alpha.csv", "r")
+alpha = text_file.readline().rstrip().split(',')
+text_file = open("beta.csv", "r")
+beta = text_file.readline().rstrip().split(',')
+ROUTE0 = alpha
+ROUTE1 = beta
+print(local_alignment(ROUTE0, ROUTE1))
